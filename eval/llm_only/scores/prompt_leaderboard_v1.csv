@@ -1,0 +1,5 @@
+prompt_name,correctness,completeness,grounding,biomedical_soundness,total,response_tokens,latency_sec,score_per_token
+prompt_v3_grounded,4.25,4.25,4.25,4.75,17.5,210.75,24.998,0.0830367734282325
+prompt_v2_concise,4.25,4.25,4.25,4.5,17.25,150.5,19.728,0.11461794019933555
+prompt_v1,4.25,4.25,4.25,4.25,17.0,228.25,32.895,0.07447973713033954
+prompt_v4_rubric,3.75,2.75,3.75,3.75,14.0,300.0,37.357,0.04666666666666667

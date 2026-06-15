@@ -1,0 +1,6 @@
+{
+  "query_id": "Q3",
+  "prompt_name": "prompt_v1",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "response": "The study on DeepGrade shows that the AI-assisted breast cancer grading system performed well in Ethiopia, achieving 100% specificity for low-grade tumours and 82.05% sensitivity for high-grade tumours. The Area Under the Curve (AUC) was 0.914, indicating good predictive performance. The Kappa coefficient of 0.71 (95% CI: 0.51-0.90) suggests a substantial agreement between the DeepGrade model and the pathologists' diagnoses. These results indicate the potential for the DeepGrade model to enhance breast cancer grading practices in resource-limited settings, leading to a consistent and standardized grading system that could improve breast cancer management."
+}

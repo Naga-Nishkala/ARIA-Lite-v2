@@ -1,0 +1,6 @@
+{
+  "query_id": "Q1",
+  "prompt_name": "prompt_v2_concise",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "response": "SNRPB2 influences breast cancer progression and the immune microenvironment by being significantly overexpressed in breast cancer tissues, correlating with malignant progression and poor prognosis. It induces G2/M cell cycle arrest in cancer cells, alters the expression of genes related to cell cycle and immune modulation, and triggers changes in alternative splicing events. Mechanistically, SNRPB2 knockdown promotes cancer cell cycle arrest by regulating HMGA2 splicing and expression, while also suppressing the expression of immune-related genes such as CSF1, CSF1R, IL6, and CX3CL1. SNRPB2 expression correlates with increased infiltration of activated inflammatory cells and myeloid-derived suppressor cells, indicating a dual role in promoting cancer progression and shaping an immunosuppressive microenvironment."
+}

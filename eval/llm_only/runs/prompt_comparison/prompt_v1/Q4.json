@@ -1,0 +1,6 @@
+{
+  "query_id": "Q4",
+  "prompt_name": "prompt_v1",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "response": "Time-dynamic AI models are helping patients with breast cancer by providing personalized predictions of clinically relevant Health-Related Quality of Life (HRQoL) impairments. These models, developed using a large dataset from the European Organisation for Research and Treatment of Cancer (EORTC) BALANCE project, can predict HRQoL impairments with good discrimination across various domains, including fatigue, financial difficulties, and functioning scales. The best-performing models are gradient boosting models, which show particularly strong performance for persistent symptoms. These models are useful for understanding individual survivorship trajectories and aiding in clinical follow-up schedules. They help predict HRQoL outcomes up to five years ahead, reflecting the range of follow-up intervals available in the dataset. The models' performance varies by risk group, but overall, they provide a tool for personalized HRQoL prediction in breast cancer care, supporting personalized care and improving the quality of life for patients. Future work should focus on improving calibration and fairness to ensure equitable and meaningful implementation of these models in clinical settings."
+}

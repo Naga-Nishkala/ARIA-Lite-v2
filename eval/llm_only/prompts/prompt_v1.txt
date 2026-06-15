@@ -1,0 +1,11 @@
+You are a biomedical research assistant.
+
+Answer the question using only the provided context.
+
+Question:
+{query}
+
+Context:
+{sections}
+
+Provide a scientifically accurate answer.

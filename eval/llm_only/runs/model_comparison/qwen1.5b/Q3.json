@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-07T23:59:55.345538",
+  "benchmark_name": "llm_only_v1.json",
+  "benchmark_path": "/content/drive/MyDrive/Colab_Notebooks/LLMs/ARIA_Lite_v2/eval/llm_only/benchmarks/llm_only_v1.json",
+  "prompt_name": "prompt_v1.txt",
+  "prompt_path": "/content/drive/MyDrive/Colab_Notebooks/LLMs/ARIA_Lite_v2/eval/llm_only/prompts/prompt_v1.txt",
+  "query_id": "Q3",
+  "model_name": "qwen1.5b",
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "temperature": 0.0,
+  "max_new_tokens": 300,
+  "do_sample": false,
+  "prompt": "You are a biomedical research assistant.\n\nAnswer the question using only the provided context.\n\nQuestion:\nWhat does the study on DeepGrade show about AI-assisted breast cancer grading in Ethiopia?\n\nContext:\n[42066422_BACKGROUND]\nRecent advances in computational pathology enables AI-assisted diagnosis and risk stratification of breast cancer. This advance in technology will reduce the inconsistent reporting of breast cancer grading using Nottingham Histologic grading system. This study evaluated the implementation of the DeepGrade model for breast cancer grading using H&E-stained slides from breast cancer patients in Ethiopia.\n\n[42066422_OBJECTIVE]\nTo assess the accuracy, specificity, and sensitivity of the DeepGrade model in distinguishing between grade 1 and grade 3 tumours. Additionally, the study aimed to explore the model's ability to further classify Nottingham Histologic Grade 2 tumours into two distinct risk categories.\n\n[42066422_METHODS]\nA retrospective analysis was conducted using data from 200 tumour samples from the Department of Pathology, Tikur Anbessa Specialized Hospital, Addis Ababa, Ethiopia. The performance of the DeepGrade model was compared with three pathologists' diagnosis using metrics such as specificity, sensitivity, area under the curve and agreement level.\n\n[42066422_RESULTS]\nThe DeepGrade model reached a 100% specificity for low-grade tumours and an 82.05% sensitivity for high-grade tumours, with an AUC of 0.914 and an agreement level of 86.79%. Our findings illustrated the model's strong agreement with the pathologist, and a Kappa coefficient of 0.71 (95% CI: 0.51-0.90).\n\n[42066422_CONCLUSION]\nThe study showed the potential significance of DeepGrade model utilization in enhancing breast cancer grading practices in resource-limited settings. By adopting this model, a consistent and standardized grading system for breast cancer can be established, significantly enhancing the effectiveness of breast cancer management.\n\nProvide a scientifically accurate answer.",
+  "response": "According to the study on DeepGrade, it shows that the AI-assisted breast cancer grading model is highly effective in differentiating between grade 1 and grade 3 tumours, achieving a specificity of 100%, sensitivity of 82.05%, and an Area Under the Curve (AUC) of 0.914. Furthermore, the model demonstrated good agreement with human pathologists, with an agreement level of 86.79% and a Kappa coefficient of 0.71 (95% CI: 0.51-0.90). These results indicate that the DeepGrade model has significant potential in improving the consistency and reliability of breast cancer grading practices in resource-limited settings like Ethiopia. However, more studies are needed to validate its applicability across various clinical scenarios and populations.",
+  "latency_seconds": 7.8755433559417725,
+  "output_tokens": 172
+}

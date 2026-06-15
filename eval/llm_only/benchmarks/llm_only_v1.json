@@ -1,0 +1,113 @@
+[
+  {
+    "query_id": "Q1",
+    "query": "How does SNRPB2 influence breast cancer progression and the immune microenvironment?",
+    "sections": [
+      {
+        "section_id": "42068395_BACKGROUND",
+        "text": "Breast cancer is a common malignant tumor with limited treatment options and poor prognosis. SNRPB2, a core spliceosomal component involved in pre-mRNA splicing, is dysregulated in multiple cancers, but its role in breast cancer remains incompletely understood."
+      },
+      {
+        "section_id": "42068395_METHODS AND RESULTS",
+        "text": "We analyzed SNRPB2 expression in breast cancer using TCGA, CPTAC, and HPA databases, and assessed its prognostic value via Kaplan-Meier plotter. The biological function of SNRPB2 was evaluated through in vitro cell line assay, and the underlying molecular mechanisms were determined via RNA-seq, RT-qPCR, and additional GEO datasets. Our findings demonstrated that SNRPB2 was significantly overexpressed in breast cancer tissues and correlated with malignant progression and poor prognosis. Knockdown of SNRPB2 induced G2/M cell cycle arrest in cancer cells, decreased expression of numerous genes related to cell cycle and immune modulation, and triggered alterations in multiple alternative splicing events. Mechanistically, SNRPB2 knockdown might promote cancer cell cycle arrest by regulating HMGA2 splicing and expression, while simultaneously suppressing the expression of immune-related genes such as CSF1, CSF1R, IL6, and CX3CL1. Immune infiltration analysis revealed that SNRPB2 expression correlated with increased infiltration of activated inflammatory cells and myeloid-derived suppressor cells."
+      },
+      {
+        "section_id": "42068395_CONCLUSIONS",
+        "text": "SNRPB2 potentially plays a dual role in promoting breast cancer progression and shaping the immunosuppressive microenvironment, partly through HMGA2 splicing modulation and immune-regulatory gene suppression. These findings suggest that SNRPB2 may represent a promising therapeutic target for breast cancer."
+      }
+    ],
+    "reference_answer": "SNRPB2 influences breast cancer progression by regulating cell cycle progression, alternative splicing, and immune-related gene expression. Its knockdown induces G2/M arrest, likely through modulation of HMGA2 splicing and expression, while also suppressing key immune regulators such as CSF1, CSF1R, IL6, and CX3CL1. Additionally, higher SNRPB2 expression is associated with increased infiltration of inflammatory cells and myeloid-derived suppressor cells, indicating a role in shaping an immunosuppressive tumor microenvironment. Together, these findings suggest that SNRPB2 promotes tumor growth and immune evasion in breast cancer.",
+    "expected_topics": [
+      "SNRPB2",
+      "G2/M cell cycle arrest",
+      "Myeloid-derived suppressor cells",
+      "Immune suppression"
+    ]
+  },
+
+  {
+    "query_id": "Q2",
+    "query": "Summarize the main findings of the review on AI in breast cancer histopathology.",
+    "sections": [
+      {
+        "section_id": "41976406_UNLABELLED",
+        "text": "Histopathological evaluation of tissue sections remains the gold standard for the diagnosis, classification, and grading of breast cancer (BC). The widespread adoption of whole-slide imaging (WSI) has enabled the digitization of histological slides and facilitated the development of artificial intelligence (AI) approaches for computational pathology. In recent years, machine learning and deep learning (DL) algorithms have been increasingly investigated for the analysis of hematoxylin and eosin (H&E)-stained images, with potential applications in tumor detection, histological classification, prognostic stratification, and prediction of treatment response. This narrative review summarizes recent developments in AI-driven models applied to BC histopathology and discusses their potential role in supporting diagnostic and prognostic assessment. Several studies have demonstrated the promising performance of DL algorithms in tasks such as the detection of lymph node metastases, assessment of residual tumor after neoadjuvant therapy, and prediction of clinical outcomes from histopathological images. Emerging research has also explored the possibility of inferring molecular and biomarker information from histology images, although these approaches currently identify statistical associations rather than direct molecular measurements. Despite the rapid expansion of this research field, significant barriers remain before routine clinical implementation can be achieved. Key challenges include dataset bias, variability in staining and image acquisition, limited external validation across institutions, and the need for transparent and reproducible model development. In addition, the translation of AI-based systems into clinical practice requires compliance with regulatory frameworks governing software used for medical purposes, such as those established by the U.S. Food and Drug Administration. Overall, AI represents a promising research direction in computational pathology and may contribute to decision-support tools capable of assisting pathologists in the analysis of digital slides. Continued efforts toward methodological rigor, large multicenter datasets, and prospective validation studies will be essential to determine the future role of AI in BC histopathology."
+      }
+    ],
+    "reference_answer": "AI, particularly deep learning applied to whole-slide H&E images, shows strong potential in breast cancer histopathology for tasks such as tumor detection, classification, prognosis, and treatment response prediction. It can also infer molecular features from images, though only as statistical associations. However, clinical adoption is limited by challenges including dataset bias, variability, lack of external validation, and regulatory requirements.",
+    "expected_topics": [
+      "Histopathological evaluation",
+      "whole-slide imaging",
+      "hematoxylin and eosin stained images",
+      "machine learning",
+      "deep learning"
+    ]
+  },
+
+  {
+    "query_id": "Q3",
+    "query": "What does the study on DeepGrade show about AI-assisted breast cancer grading in Ethiopia?",
+    "sections": [
+      {
+        "section_id": "42066422_BACKGROUND",
+        "text": "Recent advances in computational pathology enables AI-assisted diagnosis and risk stratification of breast cancer. This advance in technology will reduce the inconsistent reporting of breast cancer grading using Nottingham Histologic grading system. This study evaluated the implementation of the DeepGrade model for breast cancer grading using H&E-stained slides from breast cancer patients in Ethiopia."
+      },
+      {
+        "section_id": "42066422_OBJECTIVE",
+        "text": "To assess the accuracy, specificity, and sensitivity of the DeepGrade model in distinguishing between grade 1 and grade 3 tumours. Additionally, the study aimed to explore the model's ability to further classify Nottingham Histologic Grade 2 tumours into two distinct risk categories."
+      },
+      {
+        "section_id": "42066422_METHODS",
+        "text": "A retrospective analysis was conducted using data from 200 tumour samples from the Department of Pathology, Tikur Anbessa Specialized Hospital, Addis Ababa, Ethiopia. The performance of the DeepGrade model was compared with three pathologists' diagnosis using metrics such as specificity, sensitivity, area under the curve and agreement level."
+      },
+      {
+        "section_id": "42066422_RESULTS",
+        "text": "The DeepGrade model reached a 100% specificity for low-grade tumours and an 82.05% sensitivity for high-grade tumours, with an AUC of 0.914 and an agreement level of 86.79%. Our findings illustrated the model's strong agreement with the pathologist, and a Kappa coefficient of 0.71 (95% CI: 0.51-0.90)."
+      },
+      {
+        "section_id": "42066422_CONCLUSION",
+        "text": "The study showed the potential significance of DeepGrade model utilization in enhancing breast cancer grading practices in resource-limited settings. By adopting this model, a consistent and standardized grading system for breast cancer can be established, significantly enhancing the effectiveness of breast cancer management."
+      }
+    ],
+    "reference_answer": "The study shows that the DeepGrade AI model can accurately and consistently grade breast cancer in an Ethiopian cohort, achieving high specificity (100%) for low-grade tumors, strong sensitivity (82.05%) for high-grade tumors, and substantial agreement with pathologists (κ = 0.71). It also demonstrates potential for further stratifying intermediate-grade tumors, highlighting its value as a reliable tool to improve standardized grading in resource-limited settings.",
+    "expected_topics": [
+      "Breast cancer grading",
+      "DeepGrade",
+      "Nottingham Histologic Grade"
+    ]
+  },
+
+  {
+    "query_id": "Q4",
+    "query": "How are time-dynamic AI models helping patients with breast cancer?",
+    "sections": [
+      {
+        "section_id": "42060909_BACKGROUND",
+        "text": "Patients with breast cancer often experience health-related quality of life (HRQoL) impairments that remain difficult to predict on an individual level. Prediction models can aid in understanding individual survivorship trajectories. However, current prognostic models are based on fixed intervals, limiting their utility in clinical follow-up schedules."
+      },
+      {
+        "section_id": "42060909_OBJECTIVE",
+        "text": "This study aimed to develop and externally validate time-dynamic machine learning (ML) models that predict clinically relevant HRQoL impairments in nonmetastatic patients with breast cancer."
+      },
+      {
+        "section_id": "42060909_METHODS",
+        "text": "Using the pooled multicohort EORTC (European Organisation for Research and Treatment of Cancer) BALANCE (big data in patients with breast cancer) dataset (n=6316) containing repeated HRQoL measurements (EORTC QLQ [Quality of Life Core Questionnaire]-C30), we constructed over 70,000 patient assessment pairs. ML algorithms were trained using the earlier HRQoL assessment and clinical data to predict dichotomized impairments in QLQ-C30 domains at the later assessment between 2 weeks and 5 years ahead, reflecting the range of follow-up intervals available in the dataset. The best performing model was determined via the area under the receiver operating characteristic curve in the internal validation, and externally validated in an independent cohort of the BALANCE dataset, in which the calibration and predictive performance in risk groups (patients: postmenopause, with financial difficulties, with obesity, with 2 or more comorbidities, with lower educational status, and with frailty) were also evaluated."
+      },
+      {
+        "section_id": "42060909_RESULTS",
+        "text": "ML models showed good discrimination (area under the receiver operating characteristic curve 0.64-0.84) across most domains, especially for persistent symptoms such as fatigue, financial difficulties, or functioning scales. Gradient boosting models performed best, but tended to be overconfident, with poor calibration for low-prevalence symptoms such as diarrhea or constipation. Model performance varied by risk group (eg, lower education and frailty), though no group consistently performed poorly. Performance remained stable across time windows, with prior HRQoL being the strongest predictor at the respective scale level, while clinical variables such as the type of treatment were less important for prediction."
+      },
+      {
+        "section_id": "42060909_CONCLUSIONS",
+        "text": "Time-dynamic ML models can support personalized HRQoL prediction in breast cancer care. Future improvements should focus on calibration and fairness to enable equitable, clinically meaningful implementation."
+      }
+    ],
+    "reference_answer": "Time-dynamic AI models help breast cancer patients by enabling personalized prediction of future health-related quality of life (HRQoL) impairments over varying follow-up periods. They show good predictive performance, particularly for persistent symptoms like fatigue, and remain stable across time. By leveraging prior patient-reported outcomes, these models can support more tailored clinical monitoring and survivorship care, although improvements in calibration and fairness are still needed for reliable clinical use.",
+    "expected_topics": [
+      "Time dynamic ML model",
+      "health-related quality of life (HRQoL) impairments",
+      "prognostic models",
+      "gradient boosting models"
+    ]
+  }
+]

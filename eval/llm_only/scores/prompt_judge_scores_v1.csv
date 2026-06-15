@@ -1,0 +1,122 @@
+query_id,prompt_name,correctness,completeness,grounding,biomedical_soundness,total,judge_output,latency_sec,response_tokens
+Q1,prompt_v1,4,4,4,4,16,"CORRECTNESS: 4
+COMPLETENESS: 4
+GROUNDING: 4
+BIOMEDICAL_SOUNDNESS: 4
+
+REASONING:
+The candidate answer accurately reflects the main points regarding SNRPB2's influence on breast cancer progression and the immune microenvironment. It correctly identifies the role of SNRPB2 in inducing G2/M cell cycle arrest and regulating immune-related gene expression, which aligns with the evidence provided. However, it lacks detailed mention of specific mechanisms like HMGA2 splicing modulation, which slightly reduces its completeness and grounding in evidence. The answer is medically sound and concise, avoiding unnecessary verbosity.",51.893860816955566,254
+Q2,prompt_v1,4,4,4,4,16,"CORRECTNESS: 4
+COMPLETENESS: 4
+GROUNDING: 4
+BIOMEDICAL_SOUNDNESS: 4
+
+REASONING:
+The candidate answer accurately captures the main points of the review, including the potential uses of AI in breast cancer histopathology, the performance of AI algorithms, the challenges faced, and regulatory considerations. However, it slightly lacks in completeness by not fully summarizing the expected future role of AI without trailing off at the end. Additionally, while the answer is grounded in the evidence provided, it does not explicitly mention the limitations of inferring molecular features from histology images as statistical associations rather than direct measurements, which was noted in both the evidence and the reference answer. The biomedical soundness is maintained throughout the answer, but minor improvements in clarity and completeness could enhance the score.",37.37896728515625,300
+Q3,prompt_v1,5,5,5,5,20,"CORRECTNESS: 5
+COMPLETENESS: 5
+GROUNDING: 5
+BIOMEDICAL_SOUNDNESS: 5
+
+REASONING:
+The candidate answer accurately reflects the key findings of the study, including the specific metrics of specificity, sensitivity, and agreement levels. It correctly identifies the potential impact of the DeepGrade model in improving breast cancer grading in resource-limited settings. The answer is concise and directly addresses the expected topics without unnecessary elaboration.",17.406168699264526,149
+Q4,prompt_v1,4,4,4,4,16,"CORRECTNESS: 4
+COMPLETENESS: 4
+GROUNDING: 4
+BIOMEDICAL_SOUNDNESS: 4
+
+REASONING:
+The candidate answer accurately reflects the key points from the provided evidence, reference answer, and expected topics. It correctly identifies the role of time-dynamic AI models in predicting HRQoL impairments for breast cancer patients, mentions the use of gradient boosting models, and highlights the importance of personalized care. However, it does not explicitly mention the limitations regarding calibration and fairness, which are crucial for clinical implementation. The answer is concise and directly addresses the query without unnecessary elaboration.",24.90140199661255,210
+Q1,prompt_v2_concise,4,4,4,4,16,"CORRECTNESS: 4
+COMPLETENESS: 4
+GROUNDING: 4
+BIOMEDICAL_SOUNDNESS: 4
+
+REASONING:
+The candidate answer accurately reflects the main points discussed in the reference answer and expected topics. It correctly identifies the role of SNRPB2 in breast cancer progression and its impact on the immune microenvironment. However, minor deductions are made due to slight lack of detail in some areas, such as not explicitly mentioning the specific mechanisms by which SNRPB2 affects the immune microenvironment beyond mentioning the suppression of certain genes. The answer is concise and directly addresses the query without unnecessary elaboration.",18.55372381210327,160
+Q2,prompt_v2_concise,4,4,4,4,16,"CORRECTNESS: 4
+COMPLETENESS: 4
+GROUNDING: 4
+BIOMEDICAL_SOUNDNESS: 4
+
+REASONING:
+The candidate answer accurately captures the key points regarding the application of AI in breast cancer histopathology, including its potential uses and current limitations. However, it does not explicitly mention the use of whole-slide imaging or hematoxylin and eosin-stained images, which are important details. The answer is grounded in the provided evidence and maintains biomedical soundness, but minor details like specifying the type of images used slightly reduce the completeness and correctness scores.",20.12498259544373,105
+Q3,prompt_v2_concise,5,5,5,5,20,"CORRECTNESS: 5
+COMPLETENESS: 5
+GROUNDING: 5
+BIOMEDICAL_SOUNDNESS: 5
+
+REASONING:
+The candidate answer accurately reflects the key findings of the study, including the specific metrics of specificity, sensitivity, AUC, and agreement level. It correctly identifies the potential impact of the DeepGrade model in improving breast cancer grading practices in resource-limited settings. The answer is concise and directly addresses the expected topics without unnecessary elaboration.",18.55758261680603,153
+Q4,prompt_v2_concise,4,4,4,5,17,"CORRECTNESS: 4
+COMPLETENESS: 4
+GROUNDING: 4
+BIOMEDICAL_SOUNDNESS: 5
+
+REASONING:
+The candidate answer accurately reflects the key points from the provided evidence, reference answer, and expected topics. It correctly identifies the use of time-dynamic AI models in predicting HRQoL impairments in breast cancer patients, highlighting the good discrimination of these models, especially for persistent symptoms. The answer also notes the variability in performance by risk group and the importance of prior HRQoL assessments over clinical variables. However, it does not explicitly mention the need for improvements in calibration and fairness, which is a minor point of incompleteness. The answer is concise and directly addresses the query without unnecessary elaboration, maintaining high biomedical soundness.",21.674365043640137,184
+Q1,prompt_v3_grounded,4,4,4,4,16,"CORRECTNESS: 4
+COMPLETENESS: 4
+GROUNDING: 4
+BIOMEDICAL_SOUNDNESS: 4
+
+REASONING:
+The candidate answer accurately captures the main points regarding SNRPB2's influence on breast cancer progression and the immune microenvironment. It correctly identifies the overexpression of SNRPB2 in breast cancer tissues, its role in inducing G2/M cell cycle arrest, and its impact on immune-related gene expression. However, it lacks some minor details present in the reference answer, such as explicitly mentioning the specific mechanism involving HMGA2 splicing modulation. The answer is grounded in the evidence provided and maintains biomedical soundness throughout. Minor improvements in completeness could enhance the score further.",34.59836435317993,300
+Q2,prompt_v3_grounded,4,4,4,5,17,"CORRECTNESS: 4
+COMPLETENESS: 4
+GROUNDING: 4
+BIOMEDICAL_SOUNDNESS: 5
+
+REASONING:
+The candidate answer accurately captures the key points from the provided evidence, aligning well with the reference answer. It covers the main areas of AI's application in breast cancer histopathology, including diagnostic and prognostic assessments, the limitations of current AI methods in inferring molecular information, and the challenges faced in clinical adoption. The answer is concise and directly addresses the expected topics without unnecessary elaboration. Minor improvements could be made in explicitly mentioning whole-slide imaging and hematoxylin and eosin-stained images, which are central to the context, but overall, the biomedical soundness is high.",20.40187978744507,171
+Q3,prompt_v3_grounded,5,5,5,5,20,"CORRECTNESS: 5
+COMPLETENESS: 5
+GROUNDING: 5
+BIOMEDICAL_SOUNDNESS: 5
+
+REASONING:
+The candidate answer accurately reflects the key findings of the study, including the specific metrics of specificity, sensitivity, AUC, and Kappa coefficient. It correctly interprets these metrics within the context of the study's objectives and outcomes. The answer is concise yet comprehensive, covering all expected topics without unnecessary elaboration. The biomedical soundness is maintained throughout, aligning well with the evidence provided and the reference answer.",20.757242441177368,173
+Q4,prompt_v3_grounded,4,4,4,5,17,"CORRECTNESS: 4
+COMPLETENESS: 4
+GROUNDING: 4
+BIOMEDICAL_SOUNDNESS: 5
+
+REASONING:
+The candidate answer accurately reflects the key points from the provided evidence, reference answer, and expected topics. It correctly identifies the use of time-dynamic AI models in predicting HRQoL impairments in breast cancer patients, highlighting the good discrimination of these models, especially for persistent symptoms. The answer also mentions the limitations of the models, such as overconfidence in certain scenarios, and the need for improvements in calibration and fairness. However, minor deductions are made due to slight redundancy and lack of explicit mention of the specific datasets used (EORTC BALANCE dataset). The answer is medically sound and well-grounded in the provided evidence.",24.23415946960449,199
+Q1,prompt_v4_rubric,4,3,4,4,15,"CORRECTNESS: 4
+COMPLETENESS: 3
+GROUNDING: 4
+BIOMEDICAL_SOUNDNESS: 4
+
+REASONING:
+The candidate answer provides a good overview of SNRPB2's role in breast cancer progression and its impact on the immune microenvironment. However, it lacks some specific details about the mechanisms involved, particularly regarding the regulation of HMGA2 splicing and the suppression of immune-related genes like CSF1, CSF1R, IL6, and CX3CL1. The answer is grounded in evidence but could be more complete in detailing the exact mechanisms and their implications on the immune microenvironment. The biomedical soundness is strong, aligning well with the expected topics and reference answer, though it could benefit from a bit more detail on the specific immune cell types affected.",34.30629634857178,300
+Q2,prompt_v4_rubric,4,3,4,4,15,"CORRECTNESS: 4
+COMPLETENESS: 3
+GROUNDING: 4
+BIOMEDICAL_SOUNDNESS: 4
+
+REASONING:
+- **Correctness**: The candidate answer accurately reflects some of the key points from the provided evidence, such as the use of deep learning for detecting lymph node metastases and assessing residual tumors after neoadjuvant therapy. However, it does not fully capture all aspects mentioned in the reference answer, such as the inference of molecular features and the limitations of current AI models.
+- **Completeness**: While the answer covers important areas like tumor detection and residual tumor assessment, it lacks discussion on other critical areas such as prognostic stratification, prediction of treatment response, and the challenges faced by AI models in clinical adoption.
+- **Grounding**: The answer provides specific examples and references to studies, which adds credibility. However, it does not explicitly mention the limitations or challenges associated with AI models, which are crucial for a comprehensive understanding.
+- **Biomedical Soundness**: The answer maintains a sound biomedical perspective, discussing relevant technical details and outcomes. However, it could benefit from a more balanced view by including the limitations and challenges highlighted in the evidence.",35.77002191543579,300
+Q3,prompt_v4_rubric,3,2,3,3,11,"CORRECTNESS: 3
+COMPLETENESS: 2
+GROUNDING: 3
+BIOMEDICAL_SOUNDNESS: 3
+
+REASONING:
+- CORRECTNESS: The candidate answer correctly identifies some key metrics like specificity, sensitivity, and agreement levels but incorrectly states that the specificity was for ""low-grade tumours (grades 1 and 2)"" when it was specifically for grade 1 tumours. This reduces the score.
+- COMPLETENESS: The answer lacks details about the model's ability to further classify Nottingham Histologic Grade 2 tumours into two distinct risk categories, which was part of the study's objectives. It also introduces an unnecessary discussion about biomarkers and pathways involved, which is not supported by the evidence.
+- GROUNDING: The answer is grounded in the evidence but includes information not directly supported by the provided evidence, such as the discussion on biomarkers and pathways.
+- BIOMEDICAL_SOUNDNESS: While the answer touches on relevant biomedical aspects, the inclusion of biomarkers and pathways without proper evidence support detracts from the soundness.",34.09897041320801,300
+Q4,prompt_v4_rubric,4,3,4,4,15,"CORRECTNESS: 4
+COMPLETENESS: 3
+GROUNDING: 4
+BIOMEDICAL_SOUNDNESS: 4
+
+REASONING:
+- **Correctness**: The candidate answer accurately reflects the methodology and results of the study, including the use of time-dynamic ML models and the datasets used. However, it does not fully capture the nuances in model performance across different risk groups and the specific limitations noted regarding calibration.
+- **Completeness**: While the answer covers the main points about the methodology and some aspects of the results, it lacks detailed information on the performance variability across different risk groups and the specific limitations identified in the study.
+- **Grounding**: The answer is grounded in the evidence provided, correctly referencing the use of the EORTC BALANCE dataset and the ML algorithms employed.
+- **Biomedical Soundness**: The answer maintains biomedical soundness by discussing the application of ML models in predicting HRQoL impairments in breast cancer patients, aligning with the study's findings and implications.",45.25205707550049,300
