@@ -1,0 +1,10 @@
+{
+  "run_name": "local_retrieval_v1",
+  "timestamp_utc": "2026-08-09T23:49:17.721422+00:00",
+  "benchmark": "/content/drive/MyDrive/Colab_Notebooks/LLMs/ARIA_Lite_v2/eval/retrieval_only/retrieval_local/benchmarks/aria_local_benchmark_v2.json",
+  "graph": "/content/drive/MyDrive/Colab_Notebooks/LLMs/ARIA_Lite_v2/data/processed/aria_lite_graph_v2_1_communities_v1.pkl",
+  "retrieval_script": "/content/drive/MyDrive/Colab_Notebooks/LLMs/ARIA_Lite_v2/eval/retrieval_only/retrieval_local/src/6_local_traversal.py",
+  "retrieval_function": "run_local_query(graph, query)",
+  "num_queries": 10,
+  "notes": "Existing ARIA-Lite v2 local retrieval pipeline evaluated as-is. No retrieval logic or traversal configuration was modified."
+}

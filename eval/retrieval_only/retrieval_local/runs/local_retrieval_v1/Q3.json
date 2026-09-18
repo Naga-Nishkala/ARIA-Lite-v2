@@ -1,0 +1,10 @@
+{
+  "query_id": "Q3",
+  "query": "What are the advances and challenges in HER2-targeted therapy, particularly for neoadjuvant treatment and drug resistance?",
+  "anchor_entity": "trastuzumab",
+  "retrieval": [],
+  "runtime": {
+    "latency_sec": 0.011846406000131537,
+    "num_results": 0
+  }
+}

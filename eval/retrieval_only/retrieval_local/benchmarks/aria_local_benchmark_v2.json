@@ -1,0 +1,861 @@
+{
+  "metadata": {
+    "name": "ARIA Local-Query Benchmark v2.0",
+    "description": "Strictly local, entity-centric benchmark for evaluating 1-hop GraphRAG retrieval. Each query has ONE anchor entity. Gold evidence = direct section neighbors of that anchor only (max 10). Designed to test local retrieval, NOT global summarisation.",
+    "graph_file": "aria_lite_graph_v2_1_communities_v1.pkl",
+    "papers_file": "papers_raw.json",
+    "graph_nodes": 2105,
+    "graph_edges": 22506,
+    "retrieval_type": "local \u2014 1-hop entity neighborhood",
+    "gold_evidence_cap": 10
+  },
+  "queries": [
+    {
+      "id": "Q1",
+      "query": "What are the cardiovascular risks of aromatase inhibitors compared to tamoxifen in postmenopausal breast cancer patients?",
+      "anchor_entity": "tamoxifen",
+      "anchor_community": 5,
+      "query_type": "entity_neighborhood",
+      "rationale": "Tamoxifen has only 9 direct section neighbors \u2014 a tight, well-scoped local neighborhood. The query is answerable entirely from those sections without needing to traverse the graph further. A global retrieval system would overreach into endocrine therapy literature broadly; a correct local retrieval system surfaces only tamoxifen-adjacent sections.",
+      "gold_entities": [
+        "tamoxifen",
+        "aromatase",
+        "estrogen receptor"
+      ],
+      "gold_evidence": [
+        {
+          "node_id": "41891505_RESULTS",
+          "pmid": "41891505",
+          "section_type": "RESULTS",
+          "paper_title": "Design, synthesis, in silico, and biological evaluation of novel pyrazolopyrimidinone-based estrogen receptor inhibitors.",
+          "text_excerpt": "Compound 5a emerged as the most potent antiproliferative agent, with a mean growth inhibition percentage (GI%) of 111.5%, followed by compounds 5b, c, d. The NCI selected compounds 5a and 5b for five-dose assay, yielding GI50 values of 2.57-17.7 \u00b5M and 11.1-24.1 \u00b5M, respectively. Furthermore, flowcytometry analysis of the cell cycle on the MCF-7 cell line revealed that compounds 5a-d induced cell ",
+          "journal": "Future medicinal chemistry",
+          "year": "2026"
+        },
+        {
+          "node_id": "41926499_RESULTS",
+          "pmid": "41926499",
+          "section_type": "RESULTS",
+          "paper_title": "Cardiovascular Risks of Aromatase Inhibitors versus Tamoxifen in Postmenopausal Breast Cancer: A Multinational Cohort Study.",
+          "text_excerpt": "The study included 36,950 US patients (89% AI users) and 22,676 Taiwan patients (71% AI users). In the US, AIs were associated with an HR of 1.13 (95% CI 0.83-1.52) for MACE and 1.17 (95% CI 0.93-1.48) for HF, compared to tamoxifen. In Taiwan, the HRs were 1.23 (95% CI 0.87-1.73) for MACE and 0.93 (95% CI 0.73-1.21) for HF. AI use was linked to a lower VTE risk in the US (HR: 0.35, 95% CI 0.27-0.4",
+          "journal": "Clinical epidemiology",
+          "year": "2026"
+        },
+        {
+          "node_id": "41999978_RESULTS",
+          "pmid": "41999978",
+          "section_type": "RESULTS",
+          "paper_title": "Clinical and molecular biomarkers for prediction of endocrine response after short preoperative endocrine therapy in the WSG ADAPT",
+          "text_excerpt": "3,675 patients from ADAPT-HR+/HER2- (\u226450 years and premenopausal, \u226450y: N=1,250; >50 years or postmenopausal, >50y: N=2,425) and 4,239 from the ADAPTcycle screening cohort (\u226450y: N=1,336; >50y: N=2,903) were analyzed. ET-response rates were higher after AI (ADAPT-HR+/HER2-/ADAPTcycle: 81.4%/76.7%) vs. tamoxifen (ADAPT-HR+/HER2-/ADAPTcycle: 40.1%/34.7%) in both age groups, with further improvement ",
+          "journal": "Annals of oncology : official journal of the European Society for Medical Oncology",
+          "year": "2026"
+        },
+        {
+          "node_id": "41926499_CONCLUSION",
+          "pmid": "41926499",
+          "section_type": "CONCLUSION",
+          "paper_title": "Cardiovascular Risks of Aromatase Inhibitors versus Tamoxifen in Postmenopausal Breast Cancer: A Multinational Cohort Study.",
+          "text_excerpt": "AIs were not associated with a definitive increase in MACE or HF risk compared with tamoxifen, although confidence intervals suggest some uncertainty in the estimates. The observed differences in VTE risk across cohorts highlight the need for population-specific considerations when selecting endocrine therapy.",
+          "journal": "Clinical epidemiology",
+          "year": "2026"
+        },
+        {
+          "node_id": "41926499_BACKGROUND",
+          "pmid": "41926499",
+          "section_type": "BACKGROUND",
+          "paper_title": "Cardiovascular Risks of Aromatase Inhibitors versus Tamoxifen in Postmenopausal Breast Cancer: A Multinational Cohort Study.",
+          "text_excerpt": "Aromatase inhibitors (AIs) are the preferred treatment for postmenopausal women with hormone receptor-positive (HR+) breast cancer, but their cardiovascular safety remains uncertain. This study compared cardiovascular risks associated with AIs versus tamoxifen in two distinct populations.",
+          "journal": "Clinical epidemiology",
+          "year": "2026"
+        },
+        {
+          "node_id": "42100630_BACKGROUND AND PURPOSE",
+          "pmid": "42100630",
+          "section_type": "BACKGROUND AND PURPOSE",
+          "paper_title": "Mortality prediction with adjuvant tamoxifen in breast cancer: Machine learning-integrated explainable artificial intelligence and",
+          "text_excerpt": "Tamoxifen is a cornerstone of adjuvant endocrine therapy for breast cancer, yet significant inter-individual variability in treatment response and mortality exists. Identifying robust predictors of outcomes remains a critical need. This study integrated machine learning, explainable artificial intelligence (XAI) and Bayesian modelling to predict mortality and identify key prognostic factors in bre",
+          "journal": "ADMET & DMPK",
+          "year": "2026"
+        },
+        {
+          "node_id": "42100630_EXPERIMENTAL APPROACH",
+          "pmid": "42100630",
+          "section_type": "EXPERIMENTAL APPROACH",
+          "paper_title": "Mortality prediction with adjuvant tamoxifen in breast cancer: Machine learning-integrated explainable artificial intelligence and",
+          "text_excerpt": "We analysed data from 568 patients from the International Tamoxifen Pharmacogenomics Consortium database. The outcome was all-cause mortality, with predictors including age, race, menopausal status, tumour size, estrogen receptor status, radiation treatment, and CYP2D6 metabolizer status. Four algorithms, logistic regression, random forest, eXtreme Gradient Boosting (XGBoost) and support vector ma",
+          "journal": "ADMET & DMPK",
+          "year": "2026"
+        },
+        {
+          "node_id": "41871133_UNLABELLED",
+          "pmid": "41871133",
+          "section_type": "UNLABELLED",
+          "paper_title": "Multitarget docking and molecular enumeration reveal DdpMPyPEPhU as a potent modulator of cell cycle, glucocorticoid, and estrogen",
+          "text_excerpt": "Breast cancer is one of the most prevalent cancers worldwide, ranked as the second most diagnosed cancer and the fourth leading cause of cancer-related deaths. Despite the availability of FDA-approved therapies, limitations such as drug resistance and off-target effects highlight the need for novel, multitargeted therapeutic agents. In this study, we aimed to identify and design an in-silico promi",
+          "journal": "PloS one",
+          "year": "2026"
+        },
+        {
+          "node_id": "41928434_UNLABELLED",
+          "pmid": "41928434",
+          "section_type": "UNLABELLED",
+          "paper_title": "Decoding P21 Activated Kinase-1 (PAK1) and Drug-Resistance Enigma.",
+          "text_excerpt": "Drug resistance, also known as chemoresistance, is a known impediment in fighting cancers. Pak1 (p21-activated kinase), a serine/threonine kinase, is a known oncogene implicated in tumor progression and associated with poor prognosis in cancer patients. Pak1 has been reported to be mechanistically contributing to drug resistance to tamoxifen and gemcitabine. Using an integrative approach, the pres",
+          "journal": "Cell biochemistry and function",
+          "year": "2026"
+        }
+      ],
+      "expected_answer_elements": [
+        "aromatase inhibitors (AIs) vs tamoxifen cardiovascular comparison in US and Taiwan cohorts",
+        "HR ~1.13-1.23 for MACE with AIs vs tamoxifen (confidence intervals overlap)",
+        "VTE risk differences across populations highlight need for population-specific guidance",
+        "tamoxifen as adjuvant endocrine therapy cornerstone with inter-individual variability",
+        "CYP2D6 metabolizer status and endocrine response prediction"
+      ]
+    },
+    {
+      "id": "Q2",
+      "query": "How are tumor-infiltrating lymphocytes (TILs) scored and used to predict immunotherapy response in breast cancer?",
+      "anchor_entity": "tumor-infiltrating lymphocytes",
+      "anchor_community": 6,
+      "query_type": "entity_neighborhood",
+      "rationale": "Only 5 direct section neighbors \u2014 maximally tight local test. Spans a specific AI-TIL scoring paper (PMID:42079614), a deep learning pipeline paper (PMID:42013559), and a HER2+ pCR prediction paper (PMID:42027950). Tests whether local retrieval returns these 5 precisely without bloating into all TNBC literature.",
+      "gold_entities": [
+        "tumor-infiltrating lymphocytes",
+        "tils"
+      ],
+      "gold_evidence": [
+        {
+          "node_id": "41874698_BACKGROUND",
+          "pmid": "41874698",
+          "section_type": "BACKGROUND",
+          "paper_title": "Immunological effects of amivantamab in EGFR or MET-expressing non-small cell lung cancer.",
+          "text_excerpt": "Epidermal growth factor receptor (EGFR) mutations represent one of the most frequent oncogenic driver in non-small cell lung cancer (NSCLC). Amivantamab, a bispecific antibody targeting EGFR and MET proto-oncogene, receptor tyrosine kinase (MET), has demonstrated clinical benefit in EGFR-mutant NSCLC through dual blockade, but its immunological role in human clinical specimens, especially tumor-in",
+          "journal": "Cancer immunology, immunotherapy : CII",
+          "year": "2026"
+        },
+        {
+          "node_id": "42079614_INTRODUCTION",
+          "pmid": "42079614",
+          "section_type": "INTRODUCTION",
+          "paper_title": "AI-driven spatial analysis of tumor-infiltrating lymphocytes predicts chemo-immunotherapy response in triple-negative breast cance",
+          "text_excerpt": "Triple-negative breast cancer (TNBC) is an aggressive subtype with limited therapeutic options due to lack of estrogen receptor (ER), progesterone receptor (PR), and human epidermal growth factor receptor 2 (HER2) expression. While neoadjuvant immunotherapy shows promise, the impact of spatial organization of tertiary lymphoid structures (TLS) and tumor-infiltrating lymphocytes (TILs) on treatment",
+          "journal": "Frontiers in immunology",
+          "year": "2026"
+        },
+        {
+          "node_id": "42027950_UNLABELLED",
+          "pmid": "42027950",
+          "section_type": "UNLABELLED",
+          "paper_title": "Hierarchical Tissue-Specific Modeling of Pathology Images Predicts Response in HER2+ Breast Cancer.",
+          "text_excerpt": "The structural and spatial heterogeneity of the tumor microenvironment in human epidermal growth factor receptor 2-positive (HER2+) breast cancer (HER2+BC) poses major challenges for predicting pathologic complete response (pCR) to neoadjuvant chemotherapy. While immune-related biomarkers from whole-slide images have been widely explored, tissue-level interaction patterns and semantic features rem",
+          "journal": "Cyborg and bionic systems (Washington, D.C.)",
+          "year": "2026"
+        },
+        {
+          "node_id": "42099744_UNLABELLED",
+          "pmid": "42099744",
+          "section_type": "UNLABELLED",
+          "paper_title": "Immunotherapy innovations in triple-negative breast cancer: targeting checkpoints, combinations, and biomarkers.",
+          "text_excerpt": "Triple-negative breast cancer (TNBC), an aggressive subtype lacking estrogen receptor (ER), progesterone receptor (PR), and HER2 expression, accounts for 10-20% of breast cancers and is characterized by high metastatic potential and poor survival outcomes. Despite advancements in chemotherapy, the 5-year survival rate for metastatic TNBC remains below 30%, underscoring the need for innovative ther",
+          "journal": "Oncology reviews",
+          "year": "2026"
+        },
+        {
+          "node_id": "42013559_BACKGROUND AND OBJECTIVE",
+          "pmid": "42013559",
+          "section_type": "BACKGROUND AND OBJECTIVE",
+          "paper_title": "A modular deep learning pipeline for stromal TILs scoring in breast cancer H&E slides.",
+          "text_excerpt": "Tumor-infiltrating lymphocytes (TILs) are an important indicator of immune activity in breast cancer, yet scoring them consistently on H&E slides remains challenging in routine pathology. This work presents a modular deep learning pipeline that delivers fully automated and continuous stromal TILs (sTILs) scores in line with the International Immuno-Oncology Biomarker Working Group (IIOBWG) guideli",
+          "journal": "Computer methods and programs in biomedicine",
+          "year": "2026"
+        }
+      ],
+      "expected_answer_elements": [
+        "automated TIL scoring pipeline on H&E slides using deep learning (PMID:42013559)",
+        "AI-driven spatial TIL analysis predicts chemo-immunotherapy response in TNBC (PMID:42079614)",
+        "TILs as immune-related biomarker for pCR prediction in HER2+ breast cancer (PMID:42027950)",
+        "TNBC subtype context: ER-, PR-, HER2- with high metastatic potential",
+        "bispecific antibody (amivantamab) immune effects in NSCLC as related immunological context"
+      ]
+    },
+    {
+      "id": "Q3",
+      "query": "What are the advances and challenges in HER2-targeted therapy, particularly for neoadjuvant treatment and drug resistance?",
+      "anchor_entity": "trastuzumab",
+      "anchor_community": 8,
+      "query_type": "entity_neighborhood",
+      "rationale": "Trastuzumab has only 3 direct section neighbors \u2014 the smallest gold set in this benchmark. Retrieval must surface exactly PMID:42009845 (p95HER2 degrader), PMID:42018935 (HER2-targeted therapy review), and PMID:42041714 (tumor-agnostic HER2 landscape). A sparse-neighborhood test: hallucination risk is highest when gold evidence is thin.",
+      "gold_entities": [
+        "trastuzumab",
+        "her2",
+        "human epidermal growth factor receptor 2"
+      ],
+      "gold_evidence": [
+        {
+          "node_id": "42009845_UNLABELLED",
+          "pmid": "42009845",
+          "section_type": "UNLABELLED",
+          "paper_title": "A degrader of HER2 and EGFR abolishes p95HER2 and shows robust antitumor efficacy in HER2-positive breast cancer.",
+          "text_excerpt": "p95HER2 is commonly expressed in human epidermal growth factor receptor 2 (HER2)-positive breast cancer (BC) and is generated primarily from shedding of the extracellular domain of HER2. p95HER2 is oncogenic, driving aggressive tumor growth, and conferring drug resistance. Targeting p95HER2 is challenging. Clinically approved HER2 inhibitors either cannot bind to p95HER2 or show limited inhibitory",
+          "journal": "Scientific reports",
+          "year": "2026"
+        },
+        {
+          "node_id": "42018935_UNLABELLED",
+          "pmid": "42018935",
+          "section_type": "UNLABELLED",
+          "paper_title": "Focusing on the Advances and Challenges of HER2-Targeted Therapy: Cutting-Edge Breakthroughs in Neoadjuvant Treatment for HER2-Pos",
+          "text_excerpt": "HER2-positive breast cancer, characterized by overexpression of the human epidermal growth factor receptor 2 (HER2), accounts for approximately 15-20% of all breast cancers and is associated with aggressive tumor behavior and poor prognosis. Advances in HER2-targeted therapies, such as monoclonal antibodies (trastuzumab, pertuzumab), tyrosine kinase inhibitors (TKIs), and antibody-drug conjugates ",
+          "journal": "Technology in cancer research & treatment",
+          "year": "2026"
+        },
+        {
+          "node_id": "42041714_UNLABELLED",
+          "pmid": "42041714",
+          "section_type": "UNLABELLED",
+          "paper_title": "Tumor-Agnostic Landscape with <i>HER2</i> Amplification in Japan: Real-World Prevalence and Implications for Targeting <i>HER2</i>",
+          "text_excerpt": "Limited data exist on the prevalence of human epidermal growth factor receptor 2 (ERBB2/HER2) amplification in patients with all types of solid tumors. This retrospective, observational study (UMIN ID: UMIN000057382) analyzed the prevalence of HER2 amplification across all solid tumors using comprehensive genomic profiling (CGP) data from the Center for Cancer Genomics and Advanced Therapeutics da",
+          "journal": "Current oncology (Toronto, Ont.)",
+          "year": "2026"
+        }
+      ],
+      "expected_answer_elements": [
+        "p95HER2 generated by ECD shedding confers resistance to trastuzumab (PMID:42009845)",
+        "HER2-positive BC accounts for ~15-20% of all breast cancers (PMID:42018935)",
+        "neoadjuvant HER2-targeted therapies reviewed including pertuzumab and T-DM1",
+        "tumor-agnostic HER2 amplification prevalence across solid tumors in Japan (PMID:42041714)",
+        "novel degrader simultaneously targets HER2 and EGFR abolishing p95HER2"
+      ]
+    },
+    {
+      "id": "Q4",
+      "query": "What is the role of PIK3CA mutations in breast cancer treatment response and how are they detected using AI?",
+      "anchor_entity": "pik3ca",
+      "anchor_community": 8,
+      "query_type": "entity_neighborhood",
+      "rationale": "PIK3CA has 7 direct section neighbors covering genomics (ERBB2/PIK3CA mutations), multimodal AI prediction (digital pathology + clinical data), and clinical trials (SOLAR-1). A good mid-density local test \u2014 enough evidence to answer but contained to one entity's neighborhood.",
+      "gold_entities": [
+        "pik3ca",
+        "pik3ca akt1 pten",
+        "pi3k akt mtor"
+      ],
+      "gold_evidence": [
+        {
+          "node_id": "41929324_RESULTS",
+          "pmid": "41929324",
+          "section_type": "RESULTS",
+          "paper_title": "Fully Automated Abstraction of Longitudinal Breast Oncology Records with Off-The-Shelf Large Language Models.",
+          "text_excerpt": "Among 100 patients, the median chart had more than 3,100 pages of text; patients received a median of 7 lines of therapy over 6.5 years of follow-up. The best-performing LLM achieved 99% concordance with the expert for recurrence status, 100% for germline BRCA1/2 pathogenic variant detection, 99% for hormone receptor status, 96% for HER2 status, 91% for clinical stage, 91% for PIK3CA mutation stat",
+          "journal": "medRxiv : the preprint server for health sciences",
+          "year": "2026"
+        },
+        {
+          "node_id": "41968987_RESULTS",
+          "pmid": "41968987",
+          "section_type": "RESULTS",
+          "paper_title": "Integrative multi-omic analysis identified <i>ERBB2</i> mutations and senescence-driven immune suppression as dual therapeutic tar",
+          "text_excerpt": "The LAR subtype was enriched for PIK3CA, PTEN, and ERBB2 kinase domain mutations. Functional studies confirmed ERBB2 variants (e.g., V777L and E698_P699delinsA) as oncogenic drivers conferring sensitivity to neratinib. Transcriptomic analyses revealed a dominant cellular senescence program associated with immune suppression. The LAR-S signature stratified survival across cohorts and predicted immu",
+          "journal": "Cancer biology & medicine",
+          "year": "2026"
+        },
+        {
+          "node_id": "41968976_CONCLUSIONS",
+          "pmid": "41968976",
+          "section_type": "CONCLUSIONS",
+          "paper_title": "Multimodal artificial intelligence predicts PIK3CA mutation in breast cancer from digital pathology and clinical data: a multicent",
+          "text_excerpt": "The developed multimodal framework effectively integrates complementary morphological and clinical information, and provides a robust and generalizable method for predicting PIK3CA mutation status. Strong multicenter adaptability and biological interpretability support its potential use as a clinical decision-support tool and an accessible alternative to molecular testing.",
+          "journal": "Cancer biology & medicine",
+          "year": "2026"
+        },
+        {
+          "node_id": "41967638_BACKGROUND",
+          "pmid": "41967638",
+          "section_type": "BACKGROUND",
+          "paper_title": "Genomic Determinants of Response to Alpelisib Plus Fulvestrant in the SOLAR-1 Trial.",
+          "text_excerpt": "Approximately 40% of patients with hormone receptor-positive (HR+), human epidermal growth factor receptor 2-negative (HER2-), advanced breast cancer (ABC) have PIK3CA alterations, which contributes to endocrine therapy resistance. Alpelisib, an \u03b1-selective phosphatidylinositol 3-kinase inhibitor and degrader, given in combination with fulvestrant, is approved for the treatment of PIK3CA-mutated, ",
+          "journal": "Annals of oncology : official journal of the European Society for Medical Oncology",
+          "year": "2026"
+        },
+        {
+          "node_id": "41968976_METHODS",
+          "pmid": "41968976",
+          "section_type": "METHODS",
+          "paper_title": "Multimodal artificial intelligence predicts PIK3CA mutation in breast cancer from digital pathology and clinical data: a multicent",
+          "text_excerpt": "A total of 1,047 patients from TCGA and 166 patients from 3 external centers were included. The histopathology model used a transformer-based pretrained encoder (H-optimus-0) and a clustering-constrained attention multiple instance learning (CLAM-SB MIL) classifier to generate WSI-level representations. The clinical model incorporated engineered clinical variables and an extreme gradient boosting ",
+          "journal": "Cancer biology & medicine",
+          "year": "2026"
+        },
+        {
+          "node_id": "41898361_UNLABELLED",
+          "pmid": "41898361",
+          "section_type": "UNLABELLED",
+          "paper_title": "Anthracycline-Free Neoadjuvant Pertuzumab-Trastuzumab-Taxane in Patients with HER2-Positive Early Breast Cancer: Hormone Receptor ",
+          "text_excerpt": "Background: Neoadjuvant chemotherapy plus dual HER2 blockade is standard for HER2-positive early breast cancer (EBC), but the impact of hormone receptor (HR) status and PIK3CA mutations with anthracycline-free regimens remains unclear. Methods: We retrospectively analyzed 56 patients with stage II-III HER2-positive EBC treated with neoadjuvant pertuzumab-trastuzumab-taxane (THP) at a single instit",
+          "journal": "Biomedicines",
+          "year": "2026"
+        },
+        {
+          "node_id": "42072806_UNLABELLED",
+          "pmid": "42072806",
+          "section_type": "UNLABELLED",
+          "paper_title": "Advances in Breast Cancer Diagnostics: From Screening to Precision Medicine.",
+          "text_excerpt": "Breast cancer remains the most frequently diagnosed malignancy in women worldwide, accounting for approximately 2.3 million new cases and 670,000 deaths annually. The diagnostic landscape has undergone a paradigm shift over the past two decades, evolving from morphology-based classification toward molecularly informed, precision-guided strategies. Early and accurate diagnosis is fundamental to imp",
+          "journal": "Diagnostics (Basel, Switzerland)",
+          "year": "2026"
+        }
+      ],
+      "expected_answer_elements": [
+        "~40% of HR+/HER2- advanced breast cancer patients have PIK3CA alterations (SOLAR-1, PMID:41967638)",
+        "alpelisib + fulvestrant for PIK3CA-altered HR+/HER2- advanced BC from SOLAR-1 trial",
+        "multimodal AI predicts PIK3CA mutation from digital pathology using transformer encoder (PMID:41968976)",
+        "LAR TNBC subtype enriched for PIK3CA, PTEN, ERBB2 mutations (PMID:41968987)",
+        "LLM achieves 99% concordance for PIK3CA status abstraction from oncology records (PMID:41929324)"
+      ]
+    },
+    {
+      "id": "Q5",
+      "query": "What mechanisms of PD-L1 regulation and immunosuppression are being targeted in triple-negative breast cancer?",
+      "anchor_entity": "pd-l1",
+      "anchor_community": 6,
+      "query_type": "entity_neighborhood",
+      "rationale": "PD-L1 has 7 direct section neighbors. The query is deliberately narrow \u2014 mechanism of PD-L1 regulation specifically \u2014 so retrieval must surface HILPDA/TRIM21 immune evasion (PMID:41876831), photochemotherapy nanoplatform (PMID:41939212), and dopamine immunomodulation (PMID:42032133). A global system would retrieve all checkpoint inhibitor literature. A local system returns only the PD-L1 node's direct neighborhood.",
+      "gold_entities": [
+        "pd-l1",
+        "pd-1 pd-l1",
+        "pd-1",
+        "anti-pd-1",
+        "icis"
+      ],
+      "gold_evidence": [
+        {
+          "node_id": "41939212_RESULTS",
+          "pmid": "41939212",
+          "section_type": "RESULTS",
+          "paper_title": "Programmed Synergistic Photochemotherapy and Immune Activation of Triple Negative Breast Cancer Using Anti-PD-L1 Antibody-Conjugat",
+          "text_excerpt": "This project successfully constructed gold nanoshell-PLGA core NCs with PD-L1 antibody co-loaded with chemotherapeutic drugs doxorubicin and indoleamine 2,3-dioxygenase inhibitor NLG919. Laser-triggered release of DOX, NLG919, and photothermal therapy can synergistically induce immunogenic cell death (ICD), thereby enhancing tumor immunogenicity, inhibiting IDO, and reshaping the tumor immune micr",
+          "journal": "International journal of nanomedicine",
+          "year": "2026"
+        },
+        {
+          "node_id": "41876831_UNLABELLED",
+          "pmid": "41876831",
+          "section_type": "UNLABELLED",
+          "paper_title": "TRIM21-mediated degradation of HILPDA overcomes anti-PD-1 immunotherapy resistance in breast cancer by limiting PD-L1 palmitoylati",
+          "text_excerpt": "Immune checkpoint blockade (ICB) targeting PD-1/PD-L1 improves outcomes across multiple malignancies, yet resistance to immune checkpoint blockade remains common. Here, we identify HILPDA as a tumor-intrinsic regulator of immune evasion in breast cancer. HILPDA overexpression increases the infiltration and suppressive activity of regulatory T cells while decreasing the infiltration, activation, an",
+          "journal": "Oncogene",
+          "year": "2026"
+        },
+        {
+          "node_id": "41966805_UNLABELLED",
+          "pmid": "41966805",
+          "section_type": "UNLABELLED",
+          "paper_title": "A novel colchicine-binding site inhibitor suppresses triple-negative breast cancer growth and metastasis and synergizes with anti-",
+          "text_excerpt": "Triple-negative breast cancer (TNBC) accounts for approximately 15% of all breast cancer cases and is defined by the absence of estrogen receptor, progesterone receptor, and human epidermal growth factor receptor 2 (HER2) expression. Approximately 40% of patients with TNBC develop metastatic disease, reducing median survival to 13.3 months. Paclitaxel remains a standard chemotherapeutic option; ho",
+          "journal": "Biomedicine & pharmacotherapy = Biomedecine & pharmacotherapie",
+          "year": "2026"
+        },
+        {
+          "node_id": "42032133_UNLABELLED",
+          "pmid": "42032133",
+          "section_type": "UNLABELLED",
+          "paper_title": "Dopamine abrogates immunosuppression mediated by PD-L1 of cancer stem cells in a preclinical triple-negative breast cancer model.",
+          "text_excerpt": "Dopamine (DA) has shown antitumor potential and is known to modulate immune responses under physiological conditions; however, its specific immunomodulatory role in cancer immunotherapy remains poorly defined. Triple-negative breast cancer (TNBC) is an aggressive malignancy with strong stemness properties and a limited response to immune checkpoint inhibitors (ICIs). Cancer stem cells (CSCs) contr",
+          "journal": "Acta pharmacologica Sinica",
+          "year": "2026"
+        },
+        {
+          "node_id": "42099744_UNLABELLED",
+          "pmid": "42099744",
+          "section_type": "UNLABELLED",
+          "paper_title": "Immunotherapy innovations in triple-negative breast cancer: targeting checkpoints, combinations, and biomarkers.",
+          "text_excerpt": "Triple-negative breast cancer (TNBC), an aggressive subtype lacking estrogen receptor (ER), progesterone receptor (PR), and HER2 expression, accounts for 10-20% of breast cancers and is characterized by high metastatic potential and poor survival outcomes. Despite advancements in chemotherapy, the 5-year survival rate for metastatic TNBC remains below 30%, underscoring the need for innovative ther",
+          "journal": "Oncology reviews",
+          "year": "2026"
+        },
+        {
+          "node_id": "41930306_DIAGNOSTIC PREDICTIVE AND PROGNOSTIC APPLICATION",
+          "pmid": "41930306",
+          "section_type": "DIAGNOSTIC PREDICTIVE AND PROGNOSTIC APPLICATION",
+          "paper_title": "How artificial intelligence applied to digital pathology could guide treatment personalization in breast cancer.",
+          "text_excerpt": "Several AI tools demonstrated enhanced performances as compared with visual evaluation of pathologists, such as identification of invasive breast cancers, sentinel lymph node metastasis, histological grading, Ki-67, estrogen receptor (ER), progesterone receptor (PR), human epidermal growth factor 2 (HER2) and programmed death-ligand 1 (PD-L1) quantification. Due to this, most of them are currently",
+          "journal": "ESMO real world data and digital oncology",
+          "year": "2026"
+        },
+        {
+          "node_id": "41939212_PURPOSE",
+          "pmid": "41939212",
+          "section_type": "PURPOSE",
+          "paper_title": "Programmed Synergistic Photochemotherapy and Immune Activation of Triple Negative Breast Cancer Using Anti-PD-L1 Antibody-Conjugat",
+          "text_excerpt": "Triple-negative breast cancer (TNBC) is prone to relapse and metastasis due to the immunosuppressive state of the tumor microenvironment and limited exposure to relevant antigens, and chemotherapy alone has poor efficacy. We have developed a novel theranostic nanoplatform to address these problems: multifunctional nanocapsules (NCs) with a PD-L1-mediated gold shell induce immunogenic cell death (I",
+          "journal": "International journal of nanomedicine",
+          "year": "2026"
+        }
+      ],
+      "expected_answer_elements": [
+        "HILPDA overexpression increases PD-L1 via HIF-1\u03b1; TRIM21 degrades HILPDA to overcome ICB resistance (PMID:41876831)",
+        "gold nanoshell-PLGA nanoplatform co-loaded with DOX and NLG919 (IDO inhibitor) plus PD-L1 antibody (PMID:41939212)",
+        "dopamine abrogates PD-L1-mediated immunosuppression of cancer stem cells in TNBC (PMID:42032133)",
+        "colchicine-binding site inhibitor combined with anti-PD-L1 in TNBC (PMID:41966805)",
+        "AI tools for PD-L1 scoring compared to visual pathologist evaluation (PMID:41930306)"
+      ]
+    },
+    {
+      "id": "Q6",
+      "query": "How is explainable AI being applied to identify lncRNA biomarkers and predict outcomes in breast cancer subtypes?",
+      "anchor_entity": "explainable artificial intelligence",
+      "anchor_community": 7,
+      "query_type": "entity_neighborhood",
+      "rationale": "Only 5 direct section neighbors for this anchor. The query targets two specific papers directly attached: PMID:41884707 (lncRNA XAI framework) and PMID:42100630 (tamoxifen mortality XAI). A precise recall test \u2014 retrieval must find both without retrieving all 'machine learning' sections.",
+      "gold_entities": [
+        "explainable artificial intelligence",
+        "xai",
+        "interpretability"
+      ],
+      "gold_evidence": [
+        {
+          "node_id": "42044298_RESULTS",
+          "pmid": "42044298",
+          "section_type": "RESULTS",
+          "paper_title": "AI in Point-of-Care Imaging for Clinical Decision Support: Systematic Review of Diagnostic Accuracy, Task-Shifting, and Explainabi",
+          "text_excerpt": "Of 2113 records identified, 20 studies met inclusion criteria, encompassing approximately 78,000 patients across 15 countries. Studies evaluated tuberculosis (n=5), breast cancer (n=3), deep vein thrombosis (DVT) (n=2), and 9 other conditions using ultrasound (7/20, 35%), chest x-ray (5/20, 25%), photography-based and colposcopic imaging (3/20, 15%), fundus photography (2/20, 10%), microscopy (2/2",
+          "journal": "JMIR AI",
+          "year": "2026"
+        },
+        {
+          "node_id": "42100630_BACKGROUND AND PURPOSE",
+          "pmid": "42100630",
+          "section_type": "BACKGROUND AND PURPOSE",
+          "paper_title": "Mortality prediction with adjuvant tamoxifen in breast cancer: Machine learning-integrated explainable artificial intelligence and",
+          "text_excerpt": "Tamoxifen is a cornerstone of adjuvant endocrine therapy for breast cancer, yet significant inter-individual variability in treatment response and mortality exists. Identifying robust predictors of outcomes remains a critical need. This study integrated machine learning, explainable artificial intelligence (XAI) and Bayesian modelling to predict mortality and identify key prognostic factors in bre",
+          "journal": "ADMET & DMPK",
+          "year": "2026"
+        },
+        {
+          "node_id": "41884707_METHODS",
+          "pmid": "41884707",
+          "section_type": "METHODS",
+          "paper_title": "An explainable-AI framework reveals novel lncRNAs specific for breast cancer subtypes.",
+          "text_excerpt": "In this study, we utilized an expansive set of 7,177 lncRNAs obtained from 1,021 breast cancer (BRCA) transcriptomics datasets for subtyping using an explainable artificial intelligence (AI) framework. lncRNA, mRNA, and miRNA features were used to build machine learning (ML) models individually and in combination. Four ML classifiers: Na\u00efve Bayes, Random Forest, Artificial Neural Network, and XGBo",
+          "journal": "Frontiers in bioinformatics",
+          "year": "2026"
+        },
+        {
+          "node_id": "41968995_UNLABELLED",
+          "pmid": "41968995",
+          "section_type": "UNLABELLED",
+          "paper_title": "The role of radiomics in predicting the response to neoadjuvant chemotherapy for breast cancer.",
+          "text_excerpt": "Breast cancer exhibits profound biological and spatial heterogeneity, which contributes to variable responses to neoadjuvant chemotherapy (NAC) and challenges precision treatment planning. Radiomics, an emerging discipline that converts standard medical images into high-dimensional quantitative data, offers a non-invasive and reproducible means to capture tumor phenotype, heterogeneity, and treatm",
+          "journal": "Cancer biology & medicine",
+          "year": "2026"
+        },
+        {
+          "node_id": "42045255_UNLABELLED",
+          "pmid": "42045255",
+          "section_type": "UNLABELLED",
+          "paper_title": "Biomarker identification of triple negative breast cancer subtypes using machine learning.",
+          "text_excerpt": "Triple Negative Breast Cancer is a clinically aggressive and molecularly heterogeneous subtype of breast cancer that currently lacks effective targeted therapies. Recognising biologically distinct subtypes within this disease is crucial for enhancing diagnosis, prognosis, and therapeutic approaches. This study introduces a comprehensive analytical framework that integrates unsupervised clustering,",
+          "journal": "NPJ systems biology and applications",
+          "year": "2026"
+        }
+      ],
+      "expected_answer_elements": [
+        "7,177 lncRNAs from 1,021 BRCA transcriptomics datasets used with XAI for subtyping (PMID:41884707)",
+        "lncRNA + mRNA + miRNA features combined in ML models with explainability layer",
+        "XAI integrated with ML for tamoxifen mortality prediction (PMID:42100630)",
+        "radiomics + XAI for neoadjuvant chemotherapy response prediction (PMID:41968995)",
+        "AI point-of-care imaging diagnostic accuracy review including breast cancer (PMID:42044298)"
+      ]
+    },
+    {
+      "id": "Q7",
+      "query": "What is known about olaparib and PARP inhibition in breast cancer, specifically for brain tumor and DNA repair contexts?",
+      "anchor_entity": "olaparib",
+      "anchor_community": 8,
+      "query_type": "sparse_entity_neighborhood",
+      "rationale": "Olaparib has only 4 direct section neighbors \u2014 the second sparsest in this benchmark. Critically, 3 of the 4 sections are UNLABELLED, meaning retrieval cannot rely on section type filtering. This tests whether local retrieval can find thin but relevant signal. A system that inflates results by pulling BRCA1/2 sections broadly will fail precision on this query.",
+      "gold_entities": [
+        "olaparib",
+        "parp",
+        "parp1",
+        "brca1 2"
+      ],
+      "gold_evidence": [
+        {
+          "node_id": "42074514_RESULTS",
+          "pmid": "42074514",
+          "section_type": "RESULTS",
+          "paper_title": "Integrated Multi-Omics and Machine Learning Framework Identifies Diagnostic Signatures and Druggable Targets in Breast Cancer.",
+          "text_excerpt": "Thirty core genes were obtained through differential expression, WGCNA, and PPI screening. Integrated ML (127 algorithms) determined the optimal model (AUC = 0.919), and SHAP identified nine feature genes, among which CHEK1 and KIF23 showed preliminary diagnostic potential across four external cohorts (AUC: 0.625-0.938). Functional enrichment indicated that both are enriched in the cell cycle and ",
+          "journal": "Genes",
+          "year": "2026"
+        },
+        {
+          "node_id": "41930181_UNLABELLED",
+          "pmid": "41930181",
+          "section_type": "UNLABELLED",
+          "paper_title": "Roles of ADP-Ribosyltransferases in Cancer.",
+          "text_excerpt": "ADP-ribosyltransferases (ARTs) regulate key processes in cancer, including DNA repair, transcription, immune responses, and treatment resistance. The clostridial toxin-like ADP-ribosyltransferase (ARTC) family and the diphtheria toxin-like ADP-ribosyltransferase (ARTD) family play a crucial role in genomic stability by modification of proteins either with mono(ADP-ribosyl)ation (MARylation) or pol",
+          "journal": "Oncology research",
+          "year": "2026"
+        },
+        {
+          "node_id": "42001586_UNLABELLED",
+          "pmid": "42001586",
+          "section_type": "UNLABELLED",
+          "paper_title": "Design and synthesis of novel isatin-isoniazidhydrazone hybrid-based 1,2,3-triazoles as dual EGFR/PARP-1 inhibitors and apoptosis ",
+          "text_excerpt": "In this study, an efficient click synthesis has been employed to combine isatin, Schiff base, and 1,2,3-triazole in a single framework. Propargylation of 5-bromoisatin, followed by condensation with isoniazid, furnished the corresponding isatin-isoniazid hydrazone-based alkyne intermediate. Subsequent CuAAC reaction with a series of aromatic azides afforded a library of 1,2,3-triazole derivatives ",
+          "journal": "Bioorganic chemistry",
+          "year": "2026"
+        },
+        {
+          "node_id": "42035252_UNLABELLED",
+          "pmid": "42035252",
+          "section_type": "UNLABELLED",
+          "paper_title": "In Vitro Evaluation of PARP1 Inhibitor Olaparib-Cyanine Dye Conjugate for the Treatment of Glioblastoma.",
+          "text_excerpt": "Inhibition of DNA damage repair is a common mechanism to induce cancer cell death and, therefore, to treat cancers such as breast, prostate and ovarian cancer. This approach, although very attractive, has not been feasible for treating brain tumours due to the stringent structural features necessary for pharmaceutical agents to cross the blood-brain barrier (BBB). This study presents the proof of ",
+          "journal": "ChemMedChem",
+          "year": "2026"
+        }
+      ],
+      "expected_answer_elements": [
+        "olaparib-cyanine dye conjugate designed to cross blood-brain barrier for glioblastoma (PMID:42035252)",
+        "PARP1 inhibition as DNA damage repair mechanism for breast, prostate, ovarian cancers",
+        "CHEK1 and KIF23 identified as druggable targets via SHAP in multi-omics ML framework (PMID:42074514)",
+        "ADP-ribosyltransferases (ARTs/PARPs) regulate DNA repair and treatment resistance in cancer (PMID:41930181)",
+        "1,2,3-triazole hybrid compounds as dual EGFR/PARP inhibitors (PMID:42001586)"
+      ]
+    },
+    {
+      "id": "Q8",
+      "query": "How is spatial transcriptomics being used to study tumor heterogeneity and gene expression in breast cancer tissue?",
+      "anchor_entity": "spatial transcriptomics",
+      "anchor_community": 2,
+      "query_type": "entity_neighborhood",
+      "rationale": "13 direct section neighbors \u2014 a well-populated local neighborhood. Covers ST method papers (GR2ST graph architecture, STGNET panel extension, SpNeigh neighborhood analysis), multi-omics applications (ST3GAL4 in TNBC, TMSB10 stemness), and 3D metastasis modeling. Good test of whether retrieval ranks ST-specific sections above generic omics sections.",
+      "gold_entities": [
+        "spatial transcriptomics",
+        "single-cell rna-seq",
+        "scrna-seq",
+        "transcriptomics"
+      ],
+      "gold_evidence": [
+        {
+          "node_id": "42036805_RESULTS",
+          "pmid": "42036805",
+          "section_type": "RESULTS",
+          "paper_title": "GR2ST: Spatial Transcriptomics Prediction based on Graph-Enhanced Multimodal Contrastive Learning.",
+          "text_excerpt": "GR2ST leverages a large pre-trained pathology model to extract high-level histological features. We designed a dual-branch graph architecture, consisting of a dynamic threshold-based functional graph and a radius-constrained spatial graph, to capture complex spot interactions within heterogeneous tissues. The model aligns histology images with gene expression representations through a multimodal c",
+          "journal": "Bioinformatics (Oxford, England)",
+          "year": "2026"
+        },
+        {
+          "node_id": "42099633_RESULTS",
+          "pmid": "42099633",
+          "section_type": "RESULTS",
+          "paper_title": "Multi-omics analysis of ST3GAL4-mediated lacto/neolacto glycosphingolipid metabolism reveals immune evasion and poor prognosis in ",
+          "text_excerpt": "The Lacto/Neolacto glycosphingolipid metabolism pathway was markedly activated in TNBC compared to adjacent and non-TNBC tissues, correlating with worse prognosis. Machine learning identified ST3GAL4 as the core enzyme within this pathway. High ST3GAL4 expression was associated with increased infiltration of regulatory T cells (Tregs) and M2 macrophages, reduced CD8+ T-cell activity, and enhanced ",
+          "journal": "Frontiers in immunology",
+          "year": "2026"
+        },
+        {
+          "node_id": "41870799_METHODS",
+          "pmid": "41870799",
+          "section_type": "METHODS",
+          "paper_title": "Integrated single-cell and spatial mapping coupled with machine learning unveils core stemness landscapes and regulatory drivers i",
+          "text_excerpt": "We integrated single-cell RNA sequencing (scRNA-seq), spatial transcriptomics, and bulk transcriptomic data to identify high-stemness cell populations using the inferCNV and CytoTRACE algorithms. Stemness-related genes were evaluated for feature importance through hdWGCNA combined with machine learning approaches, and an XGBoost-based risk prediction model was constructed. Cellular differentiation",
+          "journal": "Discover oncology",
+          "year": "2026"
+        },
+        {
+          "node_id": "42032729_METHODS",
+          "pmid": "42032729",
+          "section_type": "METHODS",
+          "paper_title": "PFDN5 synergizes with anti-PD1 therapy to promote triple-negative breast cancer cell death through JAK2/STAT3/c-Myc signaling axis",
+          "text_excerpt": "PFDN5 expression was examined in TNBC clinical specimens and cell lines. Functional assays, including proliferation, clonogenicity, migration, apoptosis, and epithelial-mesenchymal transition (EMT), were performed in vitro following stable PFDN5 overexpression or CRISPR/Cas9-mediated depletion. In vivo validation was performed using xenograft models in both immunodeficient and immunocompetent mice",
+          "journal": "Journal of translational medicine",
+          "year": "2026"
+        },
+        {
+          "node_id": "42088484_METHODS",
+          "pmid": "42088484",
+          "section_type": "METHODS",
+          "paper_title": "Integrative multi-omics and radiomics reveal a TMSB10-driven cell state for non-invasive assessment and precision stratification i",
+          "text_excerpt": "We delineated breast cancer tumor cell heterogeneity by integrating single-cell transcriptomics, spatial transcriptomics, bulk transcriptomics, genomic and radiomic data. The oncogenic functions of the candidate gene TMSB10 were rigorously validated in vitro. To advance individualized patient management, we employed machine learning to develop a non-invasive MRI radiomic model for estimating tumor",
+          "journal": "Frontiers in immunology",
+          "year": "2026"
+        },
+        {
+          "node_id": "42099633_METHODS",
+          "pmid": "42099633",
+          "section_type": "METHODS",
+          "paper_title": "Multi-omics analysis of ST3GAL4-mediated lacto/neolacto glycosphingolipid metabolism reveals immune evasion and poor prognosis in ",
+          "text_excerpt": "We performed an integrative multi-omics analysis combining bulk RNA-seq, single-cell RNA-seq, and spatial transcriptomics across TNBC and non-TNBC samples from TCGA, GEO, and 10X Genomics. Eighty-five KEGG metabolic pathways were profiled to identify TNBC-specific alterations. Machine learning models (Random Forest, XGBoost) were used to prioritize key metabolic genes. Immune infiltration was eval",
+          "journal": "Frontiers in immunology",
+          "year": "2026"
+        },
+        {
+          "node_id": "41875024_UNLABELLED",
+          "pmid": "41875024",
+          "section_type": "UNLABELLED",
+          "paper_title": "STGNET: extending panel coverage in imaging-based spatial transcriptomics using deep generative adversarial networks.",
+          "text_excerpt": "Imaging-based spatial transcriptomics (ST) technologies offer unparalleled resolution for mapping gene expression within intact tissues but are fundamentally constrained by the limited size of their gene panels. This restriction hinders comprehensive biological discovery by omitting potentially crucial genes from analysis. To overcome this limitation, we introduce STGNET, a deep learning framework",
+          "journal": "Briefings in bioinformatics",
+          "year": "2026"
+        },
+        {
+          "node_id": "41915529_UNLABELLED",
+          "pmid": "41915529",
+          "section_type": "UNLABELLED",
+          "paper_title": "Sparser2Sparse: Single-shot Sparser-to-Sparse Learning for Spatial Transcriptomics Imputation with Natural Image Co-learning.",
+          "text_excerpt": "Spatial transcriptomics (ST) has revolutionized biomedical research by enabling high-resolution gene expression profiling within tissues. However, the high cost and scarcity of high-resolution ST data remain significant challenges. We present Single-shot Sparser-to-Sparse (S2S-ST), a novel framework for accurate ST imputation that requires only a single and low-cost sparsely sampled ST dataset alo",
+          "journal": "IEEE journal of biomedical and health informatics",
+          "year": "2026"
+        },
+        {
+          "node_id": "41923644_UNLABELLED",
+          "pmid": "41923644",
+          "section_type": "UNLABELLED",
+          "paper_title": "A 3D morphogenetic blueprint for metastatic outgrowth in breast cancer.",
+          "text_excerpt": "The tissue-level processes underpinning metastatic outgrowth remain unclear. We combined single-cell RNA sequencing, spatial transcriptomics, and AI-supported 3D imaging in human breast cancer with functional investigations in mice to uncover a 3D morphogenetic process essential for macrometastatic expansion. Macrometastases pervasively activate a metastatic trabecular morphogenesis (MTM) gene-exp",
+          "journal": "Cell",
+          "year": "2026"
+        },
+        {
+          "node_id": "41972009_UNLABELLED",
+          "pmid": "41972009",
+          "section_type": "UNLABELLED",
+          "paper_title": "SpNeigh: spatial neighborhood and differential expression analysis for high-resolution spatial transcriptomics.",
+          "text_excerpt": "Spatial transcriptomics technologies such as Xenium, MERFISH, and Visium HD enable high-resolution profiling of gene expression while preserving tissue architecture. However, most computational methods for spatial analysis do not explicitly model local tissue context, such as boundaries, neighborhoods, or gradients. Here, we present SpNeigh (https://github.com/jinming-cheng/SpNeigh/), an R package",
+          "journal": "NAR genomics and bioinformatics",
+          "year": "2026"
+        }
+      ],
+      "expected_answer_elements": [
+        "GR2ST: graph-enhanced multimodal contrastive learning for ST prediction from histology (PMID:42036805)",
+        "ST3GAL4 identified as core enzyme in TNBC glycosphingolipid metabolism via spatial transcriptomics (PMID:42099633)",
+        "STGNET: deep generative model to extend gene panel coverage in imaging-based ST (PMID:41875024)",
+        "SpNeigh: spatial neighborhood differential expression analysis for Xenium/MERFISH/Visium HD (PMID:41972009)",
+        "3D morphogenetic metastasis blueprint combining scRNA-seq, ST, and AI-supported imaging (PMID:41923644)"
+      ]
+    },
+    {
+      "id": "Q9",
+      "query": "How is paclitaxel being evaluated and delivered in triple-negative breast cancer treatment, including novel drug formulations?",
+      "anchor_entity": "paclitaxel",
+      "anchor_community": 6,
+      "query_type": "entity_neighborhood",
+      "rationale": "9 direct section neighbors covering paclitaxel in HR+ advanced BC (bevacizumab combination), liposomal HSPC formulation (PMID:42047769), ctDNA dynamics (PMID:41991549), and TNBC drug contexts. A mid-density test. The correct retrieval should not drift into all TNBC chemotherapy literature \u2014 only the 9 sections directly connected to this entity node.",
+      "gold_entities": [
+        "paclitaxel",
+        "taxane",
+        "dtx",
+        "bevacizumab"
+      ],
+      "gold_evidence": [
+        {
+          "node_id": "41944904_RESULTS",
+          "pmid": "41944904",
+          "section_type": "RESULTS",
+          "paper_title": "Ribociclib is not a substrate or inhibitor of Oatp1b-mediated uptake in vivo.",
+          "text_excerpt": "Ribociclib inhibited the metabolism of triazolam, a CYP3A probe, in vivo. Additionally, CDK4/6 inhibitors inhibited OATP1B-type transporters in vitro. However, ribociclib, the most potent OATP1B inhibitor, did not influence the pharmacokinetics or pharmacodynamics of the OATP1B substrates CDCA-24G or paclitaxel. Furthermore, Oatp1b2 deficiency did not alter the pharmacokinetics of ribociclib.",
+          "journal": "Cancer chemotherapy and pharmacology",
+          "year": "2026"
+        },
+        {
+          "node_id": "42065063_BACKGROUND",
+          "pmid": "42065063",
+          "section_type": "BACKGROUND",
+          "paper_title": "Bevacizumab and Paclitaxel in Advanced, Hormone Receptor-Positive Breast Cancer: Multifactor Dimensionality Reduction Methodology ",
+          "text_excerpt": "The treatment of advanced hormone receptor-positive (HR+) breast cancer has seen relevant changes in last years. However, bevacizumab remains an option when combined with paclitaxel, but no certified pharmacogenetic profiles are now usable for the prediction of its response in breast cancer patients. This study aimed to explore the pharmacogenetic interactions among single nucleotide polymorphisms",
+          "journal": "Oncology research",
+          "year": "2026"
+        },
+        {
+          "node_id": "42065063_METHODS",
+          "pmid": "42065063",
+          "section_type": "METHODS",
+          "paper_title": "Bevacizumab and Paclitaxel in Advanced, Hormone Receptor-Positive Breast Cancer: Multifactor Dimensionality Reduction Methodology ",
+          "text_excerpt": "Germline DNA extracted from blood samples was analyzed using real-time polymerase chain reaction to investigate SNPs. The multifactor dimensionality reduction (MDR) analysis was employed to assess interactions between these genetic variants. A total of 168 eligible patients were analyzed. Among these, 106 patients received both paclitaxel and bevacizumab, while 62 received paclitaxel alone.",
+          "journal": "Oncology research",
+          "year": "2026"
+        },
+        {
+          "node_id": "41863959_UNLABELLED",
+          "pmid": "41863959",
+          "section_type": "UNLABELLED",
+          "paper_title": "A programmable matrix-robust plasmonic MetaRing biosensor for rapid SERS-based chemotherapeutic response profiling.",
+          "text_excerpt": "Rapid assessment of chemotherapeutic response is essential for precision oncology but remains hindered by tumor heterogeneity and complex biological matrices. Here, we develop MetaRing, a programmable coffee-ring-derived plasmonic biosensor fabricated through dual regulation of nanoparticle concentration and evaporation temperature. This strategy enables deterministic nanoassembly, generating hier",
+          "journal": "Biosensors & bioelectronics",
+          "year": "2026"
+        },
+        {
+          "node_id": "41902997_UNLABELLED",
+          "pmid": "41902997",
+          "section_type": "UNLABELLED",
+          "paper_title": "The logarithmic phase as a therapeutic direction: evaluating pharmacological strategies against cancer progression.",
+          "text_excerpt": "Cancer remains a significant medical crisis and health burden globally, with an estimated 20 million new cases and nearly 10 million deaths annually, as per GLOBOCAN 2022. The disease burden continues to grow due to an ageing population, changes in lifestyle, environmental exposure and enhanced cancer detection, leading to enormous pressure on healthcare systems and requiring ongoing research to d",
+          "journal": "Clinical & translational oncology : official publication of the Federation of Spanish Oncology Societies and of the National Cancer Institute of Mexico",
+          "year": "2026"
+        },
+        {
+          "node_id": "41951086_UNLABELLED",
+          "pmid": "41951086",
+          "section_type": "UNLABELLED",
+          "paper_title": "Computational discovery and preclinical validation of a novel nanodrug eEF2 kinase inhibitor for suppression of tumor growth in tr",
+          "text_excerpt": "Significant genetic heterogeneity has hindered the identification of molecular targets and development of effective targeted therapies for triple negative breast cancer. Currently available targeted therapies are not curative for TNBC patients. Eukaryotic Elongation Factor-2 kinase (eEF2K) is a clinically significant proto-oncogenic therapeutic target linking this atypical alpha kinase to poor pat",
+          "journal": "International journal of biological macromolecules",
+          "year": "2026"
+        },
+        {
+          "node_id": "41966805_UNLABELLED",
+          "pmid": "41966805",
+          "section_type": "UNLABELLED",
+          "paper_title": "A novel colchicine-binding site inhibitor suppresses triple-negative breast cancer growth and metastasis and synergizes with anti-",
+          "text_excerpt": "Triple-negative breast cancer (TNBC) accounts for approximately 15% of all breast cancer cases and is defined by the absence of estrogen receptor, progesterone receptor, and human epidermal growth factor receptor 2 (HER2) expression. Approximately 40% of patients with TNBC develop metastatic disease, reducing median survival to 13.3 months. Paclitaxel remains a standard chemotherapeutic option; ho",
+          "journal": "Biomedicine & pharmacotherapy = Biomedecine & pharmacotherapie",
+          "year": "2026"
+        },
+        {
+          "node_id": "41991549_UNLABELLED",
+          "pmid": "41991549",
+          "section_type": "UNLABELLED",
+          "paper_title": "Acute circulating tumor DNA dynamics during and after systemic therapy initiation for advanced triple-negative breast cancer.",
+          "text_excerpt": "Circulating tumor DNA (ctDNA) 'tumor fraction' (TF) may correlate with therapy response, but little is known regarding TF dynamics immediately after therapy initiation. Plasma samples from a single-arm clinical trial enrolling patients with triple-negative breast cancer were collected at a variety of time points following infusion of onalespib (day -7), paclitaxel (day 1), and onalespib + paclitax",
+          "journal": "NPJ breast cancer",
+          "year": "2026"
+        },
+        {
+          "node_id": "42047769_UNLABELLED",
+          "pmid": "42047769",
+          "section_type": "UNLABELLED",
+          "paper_title": "Mechanistic and AI-assisted evaluation of paclitaxel-loaded HSPC liposomes for targeted breast cancer therapy.",
+          "text_excerpt": "Paclitaxel (PCL) faces translational barriers including poor aqueous solubility (log P = 3.0) and dose-limiting toxicity. Hydrogenated soy phosphatidylcholine (HSPC) liposomes were engineered exploiting the lipid's high phase transition temperature (Tm ~ 52 \u00b0C) for membrane rigidity and sustained drug retention. Synthesized via thin-film hydration (HSPC:cholesterol:PCL = 7:2:0.1), nano-formulation",
+          "journal": "Naunyn-Schmiedeberg's archives of pharmacology",
+          "year": "2026"
+        }
+      ],
+      "expected_answer_elements": [
+        "HSPC liposomes engineered for paclitaxel delivery exploiting high Tm ~52\u00b0C for membrane rigidity (PMID:42047769)",
+        "bevacizumab + paclitaxel for advanced HR+ breast cancer: pharmacogenetic SNP analysis (PMID:42065063)",
+        "ctDNA tumor fraction dynamics during systemic therapy initiation in TNBC (PMID:41991549)",
+        "MetaRing plasmonic biosensor for rapid SERS-based chemotherapeutic response assessment (PMID:41863959)",
+        "eEF2 kinase inhibitor computational discovery for TNBC as alternative targeted approach (PMID:41951086)"
+      ]
+    },
+    {
+      "id": "Q10",
+      "query": "What is the role of estrogen receptor status in predicting axillary lymph node response and guiding AI-based subtyping?",
+      "anchor_entity": "estrogen receptor",
+      "anchor_community": 8,
+      "query_type": "entity_neighborhood",
+      "rationale": "16 direct section neighbors, capped to top 10. The anchor connects imaging AI (deep learning radiomics MRI), FTIR spectroscopy, endocrine therapy (vepdegestrant PROTAC), and TNBC context papers. Tests ranking: a good retrieval system surfaces RESULTS and CONCLUSIONS sections before UNLABELLED sections. Gold evidence cap at 10 means only the highest-priority section types are included.",
+      "gold_entities": [
+        "estrogen receptor",
+        "estrogen receptor alpha",
+        "er-positive",
+        "er",
+        "esr1"
+      ],
+      "gold_evidence": [
+        {
+          "node_id": "41928849_RESULTS",
+          "pmid": "41928849",
+          "section_type": "RESULTS",
+          "paper_title": "Deep Learning Radiomics of Multiparametric MRI for Individualized Prediction of Axillary Lymph Node Response After Neoadjuvant Che",
+          "text_excerpt": "Estrogen receptor status, HER2 status, and clinical T stage were independent predictors of axillary pathological complete response (apCR). The DLR model achieved the highest predictive performance, with AUCs of 0.939 (95% CI: 0.905-0.974) in the training set and 0.856 (95% CI: 0.774-0.938) in the validation set. DeLong tests showed that the DLR model outperformed only the clinical model (p < 0.000",
+          "journal": "Breast cancer (Dove Medical Press)",
+          "year": "2026"
+        },
+        {
+          "node_id": "41999978_RESULTS",
+          "pmid": "41999978",
+          "section_type": "RESULTS",
+          "paper_title": "Clinical and molecular biomarkers for prediction of endocrine response after short preoperative endocrine therapy in the WSG ADAPT",
+          "text_excerpt": "3,675 patients from ADAPT-HR+/HER2- (\u226450 years and premenopausal, \u226450y: N=1,250; >50 years or postmenopausal, >50y: N=2,425) and 4,239 from the ADAPTcycle screening cohort (\u226450y: N=1,336; >50y: N=2,903) were analyzed. ET-response rates were higher after AI (ADAPT-HR+/HER2-/ADAPTcycle: 81.4%/76.7%) vs. tamoxifen (ADAPT-HR+/HER2-/ADAPTcycle: 40.1%/34.7%) in both age groups, with further improvement ",
+          "journal": "Annals of oncology : official journal of the European Society for Medical Oncology",
+          "year": "2026"
+        },
+        {
+          "node_id": "41905185_BACKGROUND",
+          "pmid": "41905185",
+          "section_type": "BACKGROUND",
+          "paper_title": "Artificial intelligence-assisted FTIR spectroscopy for hormone receptor subtyping in formalin-fixed breast Cancer tissues.",
+          "text_excerpt": "Determination of estrogen receptor (ER) and progesterone receptor (PR) status is critical for breast cancer subtyping and guiding endocrine therapy. Although immunohistochemistry (IHC) remains the diagnostic gold standard, it is costly, labor-intensive, and prone to interobserver variability. These limitations are particularly restrictive in low-resource settings where access to standardized recep",
+          "journal": "Spectrochimica acta. Part A, Molecular and biomolecular spectroscopy",
+          "year": "2026"
+        },
+        {
+          "node_id": "42079614_INTRODUCTION",
+          "pmid": "42079614",
+          "section_type": "INTRODUCTION",
+          "paper_title": "AI-driven spatial analysis of tumor-infiltrating lymphocytes predicts chemo-immunotherapy response in triple-negative breast cance",
+          "text_excerpt": "Triple-negative breast cancer (TNBC) is an aggressive subtype with limited therapeutic options due to lack of estrogen receptor (ER), progesterone receptor (PR), and human epidermal growth factor receptor 2 (HER2) expression. While neoadjuvant immunotherapy shows promise, the impact of spatial organization of tertiary lymphoid structures (TLS) and tumor-infiltrating lymphocytes (TILs) on treatment",
+          "journal": "Frontiers in immunology",
+          "year": "2026"
+        },
+        {
+          "node_id": "42100630_EXPERIMENTAL APPROACH",
+          "pmid": "42100630",
+          "section_type": "EXPERIMENTAL APPROACH",
+          "paper_title": "Mortality prediction with adjuvant tamoxifen in breast cancer: Machine learning-integrated explainable artificial intelligence and",
+          "text_excerpt": "We analysed data from 568 patients from the International Tamoxifen Pharmacogenomics Consortium database. The outcome was all-cause mortality, with predictors including age, race, menopausal status, tumour size, estrogen receptor status, radiation treatment, and CYP2D6 metabolizer status. Four algorithms, logistic regression, random forest, eXtreme Gradient Boosting (XGBoost) and support vector ma",
+          "journal": "ADMET & DMPK",
+          "year": "2026"
+        },
+        {
+          "node_id": "41866773_UNLABELLED",
+          "pmid": "41866773",
+          "section_type": "UNLABELLED",
+          "paper_title": "Insights Into Vepdegestrant (ARV-471): The First-in-Class Estrogen Receptor Proteolysis-Targeting Chimera Approaching Food and Dru",
+          "text_excerpt": "Vepdegestrant (ARV-471) is an orally bioavailable, proteolysis-targeting chimera (PROTAC)-based estrogen receptor (ER) degrader and is among the most clinically advanced ER-targeting PROTAC degraders, identified through a rational medicinal chemistry optimization campaign. It is being developed as an oral small-molecule endocrine therapy for advanced or metastatic ER-positive, human epidermal grow",
+          "journal": "ChemMedChem",
+          "year": "2026"
+        },
+        {
+          "node_id": "41891880_UNLABELLED",
+          "pmid": "41891880",
+          "section_type": "UNLABELLED",
+          "paper_title": "Accurate prediction of cohesin and RNA Polymerase II-associated chromatin interactions using convolutional neural networks.",
+          "text_excerpt": "The three-dimensional (3D) genome organization specifies how the distal regulatory elements in the linear genome interact with target genes to regulate transcription. Several experimental methods have been developed to study the 3D genome organization. However, these methods are, in general, expensive, technically challenging, and time-consuming. We present Convolutional Neural Networks-Chromatin ",
+          "journal": "Nucleic acids research",
+          "year": "2026"
+        },
+        {
+          "node_id": "41963522_UNLABELLED",
+          "pmid": "41963522",
+          "section_type": "UNLABELLED",
+          "paper_title": "Novel SOAT inhibitors block DHEAS transport and suppress proliferation in MCF-7 breast cancer cells.",
+          "text_excerpt": "Intracrine estrogen formation from adrenal precursors such as dehydroepiandrosterone sulfate (DHEAS) plays a critical role in sustaining estrogen receptor (ER)-positive breast cancer cell proliferation, particularly in postmenopausal women. The sodium-dependent organic anion transporter (SOAT, gene symbol SLC10A6) facilitates the cellular uptake of sulfated steroids, thereby making these precursor",
+          "journal": "Scientific reports",
+          "year": "2026"
+        },
+        {
+          "node_id": "41966805_UNLABELLED",
+          "pmid": "41966805",
+          "section_type": "UNLABELLED",
+          "paper_title": "A novel colchicine-binding site inhibitor suppresses triple-negative breast cancer growth and metastasis and synergizes with anti-",
+          "text_excerpt": "Triple-negative breast cancer (TNBC) accounts for approximately 15% of all breast cancer cases and is defined by the absence of estrogen receptor, progesterone receptor, and human epidermal growth factor receptor 2 (HER2) expression. Approximately 40% of patients with TNBC develop metastatic disease, reducing median survival to 13.3 months. Paclitaxel remains a standard chemotherapeutic option; ho",
+          "journal": "Biomedicine & pharmacotherapy = Biomedecine & pharmacotherapie",
+          "year": "2026"
+        },
+        {
+          "node_id": "42003934_UNLABELLED",
+          "pmid": "42003934",
+          "section_type": "UNLABELLED",
+          "paper_title": "Cutting-edge advances in endocrine therapy for breast cancer (Review).",
+          "text_excerpt": "Endocrine therapy remains one of the primary treatment modalities for estrogen receptor (ER) positive breast cancer, serving a pivotal role in improving patient outcomes and extending survival. Nevertheless, the gradual emergence of endocrine resistance continues to limit its clinical efficacy. In recent years, advances in molecular biology and genomics have driven the development of innovative te",
+          "journal": "Oncology letters",
+          "year": "2026"
+        }
+      ],
+      "expected_answer_elements": [
+        "ER status as independent predictor of axillary pCR; DLR model AUC 0.939 training / 0.856 test (PMID:41928849)",
+        "FTIR spectroscopy + AI for ER/PR hormone receptor subtyping in FFPE tissue (PMID:41905185)",
+        "vepdegestrant (ARV-471): first-in-class PROTAC ER degrader for ER+ breast cancer (PMID:41866773)",
+        "endocrine therapy resistance mechanisms and novel strategies review (PMID:42003934)",
+        "SOAT inhibitors block DHEAS transport to suppress ER+ MCF-7 cell proliferation (PMID:41963522)"
+      ]
+    }
+  ]
+}
